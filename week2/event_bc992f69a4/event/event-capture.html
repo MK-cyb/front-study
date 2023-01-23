@@ -39,7 +39,7 @@
       const button = document.querySelector('button');
 
       outer.addEventListener('click', event => {
-        if (event.target !== event.currentTarget) {
+        if(event.target !== event.currentTarget) {
           return;
         }
         console.log(`outer: ${event.currentTarget}, ${event.target}`);
@@ -52,6 +52,7 @@
       });
       button.addEventListener('click', event => {
         console.log(`button1 ${event.currentTarget}, ${event.target}`);
+        //event.stopPropagation();
       });
       button.addEventListener('click', event => {
         console.log(`button2 ${event.currentTarget}, ${event.target}`);
